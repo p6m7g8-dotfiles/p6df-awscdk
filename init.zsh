@@ -23,7 +23,10 @@ p6df::modules::awscdk::deps() { ModuleDeps=(aws/aws-cdk) }
 #
 #>
 ######################################################################
-p6df::modules::awscdk::external::brew() { }
+p6df::modules::awscdk::external::brew() { 
+
+  brew cask install dotnet-sdk
+}
 
 ######################################################################
 #<
