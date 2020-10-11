@@ -14,7 +14,13 @@ p6df::modules::awscdk::version() { echo "0.0.1" }
 #
 #>
 ######################################################################
-p6df::modules::awscdk::deps() { ModuleDeps=(aws/aws-cdk) }
+p6df::modules::awscdk::deps() {
+  ModuleDeps=(
+    p6m7g8/p6awscdk
+    p6m7g8/p6df-aws
+    aws/aws-cdk
+  )
+}
 
 ######################################################################
 #<
@@ -23,7 +29,7 @@ p6df::modules::awscdk::deps() { ModuleDeps=(aws/aws-cdk) }
 #
 #>
 ######################################################################
-p6df::modules::awscdk::external::brew() { 
+p6df::modules::awscdk::external::brew() {
 
   brew cask install dotnet-sdk
 }
@@ -79,6 +85,18 @@ p6df::modules::awscdk::aliases() {
 
   # runs "npm run watch" for the current module (recommended to run in a separate terminal session)
   alias lw='lr watch'
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::prompt::line()
+#
+#>
+######################################################################
+p6df::modules::awscdk::prompt::line() {
+
+  p6_awscdk_prompt_info
 }
 
 ######################################################################
