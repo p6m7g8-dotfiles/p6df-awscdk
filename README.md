@@ -8,5 +8,4 @@
 - p6df::modules::awscdk::init()
 - p6df::modules::awscdk::langs()
 - p6df::modules::awscdk::prompt::line()
-- p6df::modules::awscdk::version()
 
