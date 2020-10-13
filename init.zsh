@@ -35,6 +35,14 @@ p6df::modules::awscdk::external::brew() {
 ######################################################################
 p6df::modules::awscdk::langs() {
 
+  npm install -g aws-cdk
+  nodenv rehash
+  
+  npm list --depth 0 -g  
+}
+
+p6df::modules::awscdk::langs::awscdk() {
+
   (cd $P6_DFZ_SRC_DIR/aws/aws-cdk; yarn build)
 }
 
