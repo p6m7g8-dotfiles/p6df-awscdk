@@ -41,6 +41,13 @@ p6df::modules::awscdk::langs() {
   npm list --depth 0 -g  
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::langs::awscdk()
+#
+#>
+######################################################################
 p6df::modules::awscdk::langs::awscdk() {
 
   (cd $P6_DFZ_SRC_DIR/aws/aws-cdk; yarn build)

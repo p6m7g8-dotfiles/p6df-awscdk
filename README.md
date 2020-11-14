@@ -7,5 +7,6 @@
 - p6df::modules::awscdk::home::symlink()
 - p6df::modules::awscdk::init()
 - p6df::modules::awscdk::langs()
+- p6df::modules::awscdk::langs::awscdk()
 - p6df::modules::awscdk::prompt::line()
 
