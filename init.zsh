@@ -23,7 +23,7 @@ p6df::modules::awscdk::deps() {
 ######################################################################
 p6df::modules::awscdk::external::brew() {
 
-  brew cask install dotnet-sdk
+  brew install --cask dotnet-sdk
 }
 
 ######################################################################
