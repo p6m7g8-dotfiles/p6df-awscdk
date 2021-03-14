@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-awscdk:
+
+#### p6df-awscdk/init.zsh:
 
 - p6df::modules::awscdk::deps()
 - p6df::modules::awscdk::docker::build()
