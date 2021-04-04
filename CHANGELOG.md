@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-awscdk/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+### Bug Fixes
+
+* **bew:** aws/aws-cdk's ./pack.sh needs dotnet-sdk >= 3.1.0 ([#16](https://github.com/p6m7g8/p6df-awscdk/issues/16)) ([59e80ba](https://github.com/p6m7g8/p6df-awscdk/commit/59e80ba4d193d095bd9bb3ad9697fedfb9cb5561))
+* **jsii-srcmak:** chases brew formula move ([#19](https://github.com/p6m7g8/p6df-awscdk/issues/19)) ([188eea1](https://github.com/p6m7g8/p6df-awscdk/commit/188eea19c8128cf64f4b158d63b2f84f693c9b74))
+
+
+* unused ([#21](https://github.com/p6m7g8/p6df-awscdk/issues/21)) ([dfb622d](https://github.com/p6m7g8/p6df-awscdk/commit/dfb622d24c989c71838be3a5b7dfe8238fbe5de8))
+* **link:** remove rendundant symlinks; echo for now ([#20](https://github.com/p6m7g8/p6df-awscdk/issues/20)) ([5292fab](https://github.com/p6m7g8/p6df-awscdk/commit/5292fab89c9bccbafbf8229c6cb7534f7841b546))
+* **README:** updates generator ([#18](https://github.com/p6m7g8/p6df-awscdk/issues/18)) ([7ecafe6](https://github.com/p6m7g8/p6df-awscdk/commit/7ecafe6f221ce1810eb4019dc0aef55657febe99))
+* Coc -> .github ([d939f32](https://github.com/p6m7g8/p6df-awscdk/commit/d939f327e1dac404b5ffd592ffc31c35d08bcdf1))
+* shuffle aliases location ([#17](https://github.com/p6m7g8/p6df-awscdk/issues/17)) ([c417b37](https://github.com/p6m7g8/p6df-awscdk/commit/c417b379aa0845daebe6001fce4f60e0af1bfb24))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-awscdk/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
