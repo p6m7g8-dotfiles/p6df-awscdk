@@ -36,7 +36,7 @@ p6df::modules::awscdk::external::brew() {
 ######################################################################
 p6df::modules::awscdk::langs() {
 
-  npm install -g aws-cdk
+  npm install -g aws-cdk cdk-dia
   nodenv rehash
 
   npm list --depth 0 -g
