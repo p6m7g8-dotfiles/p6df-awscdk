@@ -1,7 +1,4 @@
-13590dhimant/angular-cdk-portal
-180517/flywaymigrationconstruct-monocdk
 1davidmichael/Cloudwatch-Alarms-to-Chat-Platforms
-45048633+schadem/schadem-cdk-construct-test
 4romgod/dyondo-infrastructure-cdk
 5hintaro/cdk-playground
 AHors93/CDK-Stack
@@ -573,7 +570,6 @@ kakakoi/cdk-fargate-route53
 kamilbiela/cdk-sqs-monitored
 kamilbiela/cdk-sqs-monitored 
 kamilsamaj/cdk-workshop
-kangks/cdk-constructs/tree/main/serverless-eks-fargate
 karthickcse05/cdk-codepipeline
 karthickcse05/cdk-examples
 karthickcse05/ecs-cluster-cdk

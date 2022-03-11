@@ -2,10 +2,13 @@
 
 """
 Usage:
-  images.py [--start-page N]
+  images.py [--start-page N] [--end-page N] [--records-per-page N] [--cdk CDK]
 
 Options:
-  --start-page <N>         Start Downloads on page N
+  --start-page <N>         Start Downloads on page N  [default: 1]
+  --end-page <N>           End Download on page N  [default: 10]
+  --records-per-page <N>   Number(N) of items per page  [default: 25]
+  --cdk <cdk8s|cdk|cdktf>  Type of cdk [default: cdktf]
 
 Environment:
 N/A
@@ -32,18 +35,18 @@ def main(args):
 
     browser = webdriver.Chrome()
 
-    j = 38
-    while j < 39:
-        browser.get('https://constructs.dev/search?q=&offset={}'.format(j))
-
+    j = args['--start-page']
+    while j < args['--end-page']:
+        print('=> Page {}'.format(j))
+        browser.get(
+            'https://constructs.dev/search?cdk={}&q=&offset={}'.format(args['--cdk'], j))
         time.sleep(3)
 
         i = 1
-        while i < 25:
+        while i < int(args['--records-per-page']):
             browser.find_element(
                 By.XPATH, value='/html/body/div[2]/main/div/div[2]/div[2]/div[{}]/article/div[1]/div[1]/a'.format(i)).click()
-
-            time.sleep(2)
+            time.sleep(3)
 
             url = browser.find_element(
                 By.XPATH, value='/html/body/div[2]/main/div/div[1]/div[3]/div/div[2]/div/p[2]/span/a').get_property('href')
@@ -64,7 +67,6 @@ def main(args):
 
 if __name__ == '__main__':
     arguments = {}
-    arguments['start-page'] = 1
-
     arguments = docopt.docopt(__doc__, options_first=True, version="0.0.1")
+    print(arguments)
     sys.exit(main(arguments))
