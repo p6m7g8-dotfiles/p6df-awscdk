@@ -44,6 +44,7 @@
 
 #### p6df-awscdk/init.zsh:
 
+- p6df::modules::awscdk::clones()
 - p6df::modules::awscdk::deps()
 - p6df::modules::awscdk::docker::build()
 - p6df::modules::awscdk::docker::run(...)
