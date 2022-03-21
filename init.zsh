@@ -27,6 +27,15 @@ p6df::modules::awscdk::external::brew() {
   brew install dotnet
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::home::symlink()
+#
+#  Depends:	 p6_file
+#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
+######################################################################
 p6df::modules::awscdk::home::symlink() {
 
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.nuget" ".nuget"
