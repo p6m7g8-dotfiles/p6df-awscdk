@@ -66,10 +66,7 @@ p6df::modules::awscdk::langs() {
 ######################################################################
 p6df::modules::awscdk::langs::awscdk() {
 
-  (
-    cd $P6_DFZ_SRC_DIR/aws/aws-cdk
-    yarn build
-  )
+  p6_run_dir "$P6_DFZ_SRC_DIR/aws/aws-cdk" "yarn build"
 }
 
 ######################################################################
