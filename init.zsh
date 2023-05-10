@@ -35,6 +35,7 @@ p6df::modules::awscdk::external::brew() {
 #
 # Function: p6df::modules::awscdk::home::symlink()
 #
+#  Depends:	 p6_file
 #  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
