@@ -87,7 +87,7 @@ p6df::modules::awscdk::langs::awscdk() {
 ######################################################################
 p6df::modules::awscdk::clones() {
 
-  p6_run_parallel "0" "4" "$(cat $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/conf/cdks)" "p6_github_gh_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
+  p6_run_parallel "0" "4" "$(cat $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/conf/cdks)" "p6_github_util_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
 
   p6_return_void
 }
