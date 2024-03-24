@@ -24,8 +24,8 @@ p6df::modules::awscdk::deps() {
 p6df::modules::awscdk::external::brew() {
 
   brew tap isen-ng/dotnet-sdk-versions
-  brew install --cask dotnet-sdk3-1-400
-  brew install dotnet
+  p6df::modules::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
+  p6df::modules::homebrew::cli::brew::install dotnet
 
   p6_return_void
 }
@@ -43,6 +43,26 @@ p6df::modules::awscdk::home::symlink() {
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.nuget" ".nuget"
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.dotnet" ".dotnet"
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.templateengine" ".templateengine"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::init(_module, dir)
+#
+#  Args:
+#	_module -
+#	dir -
+#
+#>
+######################################################################
+p6df::modules::awscdk::init() {
+  local _module="$1"
+  local dir="$2"
+
+  p6_bootstrap "$dir"
 
   p6_return_void
 }
@@ -87,39 +107,7 @@ p6df::modules::awscdk::langs::awscdk() {
 ######################################################################
 p6df::modules::awscdk::clones() {
 
-  p6_run_parallel "0" "4" "$(cat $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/conf/cdks)" "p6_github_util_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::docker::build()
-#
-#>
-######################################################################
-p6df::modules::awscdk::docker::build() {
-
-  docker build -t aws-cdk .
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::docker::run(...)
-#
-#  Args:
-#	... -
-#
-#>
-######################################################################
-p6df::modules::awscdk::docker::run() {
-  shift 0
-
-  docker run -v $(pwd):/app -w /app aws-cdk "$@"
+  p6_run_parallel "0" "4" "$(cat $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/conf/cdks)" "p6_github_cli_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
 
   p6_return_void
 }
