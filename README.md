@@ -10,8 +10,7 @@
   - [Summary](#summary)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
-  - [Changes](#changes)
-    - [Usage](#usage)
+  - [Usage](#usage)
   - [Author](#author)
 
 ### Badges
@@ -34,11 +33,13 @@
 
 - [Code of Conduct](https://github.com/p6m7g8/.github/blob/master/CODE_OF_CONDUCT.md)
 
-## Changes
-
-- [Change Log](CHANGELOG.md)
-
 ## Usage
+
+
+### Aliases
+
+
+### Functions
 
 ### p6df-awscdk:
 
@@ -46,16 +47,30 @@
 
 - p6df::modules::awscdk::clones()
 - p6df::modules::awscdk::deps()
-- p6df::modules::awscdk::docker::build()
-- p6df::modules::awscdk::docker::run(...)
 - p6df::modules::awscdk::external::brew()
 - p6df::modules::awscdk::home::symlink()
+- p6df::modules::awscdk::init(_module, dir)
 - p6df::modules::awscdk::langs()
 - p6df::modules::awscdk::langs::awscdk()
 - p6df::modules::awscdk::prompt::line()
 
 
+### p6df-awscdk/lib:
 
+#### p6df-awscdk/lib/docker.sh:
+
+- p6df::modules::awscdk::docker::build()
+- p6df::modules::awscdk::docker::run(...)
+
+
+
+## Hier
+```text
+.
+└── docker.sh
+
+1 directory, 1 file
+```
 ## Author
 
 Philip M . Gollucci <pgollucci@p6m7g8.com>
