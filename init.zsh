@@ -64,6 +64,8 @@ p6df::modules::awscdk::init() {
 
   p6_bootstrap "$dir"
 
+  p6_env_export "DOTNET_ROOT" "/opt/homebrew/opt/dotnet/libexec"
+
   p6_return_void
 }
 
