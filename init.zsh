@@ -56,6 +56,7 @@ p6df::modules::awscdk::home::symlink() {
 #	_module -
 #	dir -
 #
+#  Environment:	 DOTNET_ROOT
 #>
 ######################################################################
 p6df::modules::awscdk::init() {
