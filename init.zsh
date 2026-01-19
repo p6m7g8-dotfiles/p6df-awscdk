@@ -105,7 +105,7 @@ p6df::modules::awscdk::langs::awscdk() {
 #
 # Function: p6df::modules::awscdk::clones()
 #
-#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#  Environment:	 P6_DFZ_SRC_FOCUSED_DIR P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::awscdk::clones() {
