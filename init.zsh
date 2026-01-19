@@ -118,11 +118,11 @@ p6df::modules::awscdk::clones() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::prompt::line()
+# Function: p6df::modules::awscdk::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::awscdk::prompt::line() {
+p6df::modules::awscdk::prompt::mod() {
 
   p6_awscdk_prompt_info
 }
