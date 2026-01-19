@@ -110,7 +110,7 @@ p6df::modules::awscdk::langs::awscdk() {
 ######################################################################
 p6df::modules::awscdk::clones() {
 
-  p6_run_parallel "0" "4" "$(cat $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/conf/cdks)" "p6_github_cli_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
+  p6_run_parallel "0" "4" "$(cat "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR"/p6df-awscdk/conf/cdks)" "p6_github_cli_clone" "$P6_DFZ_SRC_FOCUSED_DIR"
 
   p6_return_void
 }
@@ -118,11 +118,11 @@ p6df::modules::awscdk::clones() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::prompt::line()
+# Function: p6df::modules::awscdk::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::awscdk::prompt::line() {
+p6df::modules::awscdk::prompt::mod() {
 
   p6_awscdk_prompt_info
 }
