@@ -26,7 +26,7 @@ p6df::modules::awscdk::docker::build() {
 p6df::modules::awscdk::docker::run() {
   shift 0
 
-  docker run -v $(pwd):/app -w /app aws-cdk "$@"
+  docker run -v "$(pwd)":/app -w /app aws-cdk "$@"
 
   p6_return_void
 }
