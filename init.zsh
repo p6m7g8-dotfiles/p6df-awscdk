@@ -24,8 +24,8 @@ p6df::modules::awscdk::deps() {
 p6df::modules::awscdk::external::brew() {
 
   brew tap isen-ng/dotnet-sdk-versions
-  p6df::modules::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
-  p6df::modules::homebrew::cli::brew::install dotnet
+  p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
+  p6df::core::homebrew::cli::brew::install dotnet
 
   p6_return_void
 }
