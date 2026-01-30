@@ -10,7 +10,6 @@ p6df::modules::awscdk::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6awscdk
     p6m7g8-dotfiles/p6df-aws
-    aws/aws-cdk
   )
 }
 
