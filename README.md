@@ -40,6 +40,9 @@ TODO: Add a short summary of this module.
 - `p6df::modules::awscdk::external::brew()`
 - `p6df::modules::awscdk::home::symlink()`
 - `p6df::modules::awscdk::init(_module, dir)`
+  - Args:
+    - _module - 
+    - dir - 
 - `p6df::modules::awscdk::langs()`
 - `p6df::modules::awscdk::langs::awscdk()`
 - `p6df::modules::awscdk::prompt::mod()`
@@ -50,6 +53,8 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules::awscdk::docker::build()`
 - `p6df::modules::awscdk::docker::run(...)`
+  - Args:
+    - ... - 
 
 ## Hierarchy
 
