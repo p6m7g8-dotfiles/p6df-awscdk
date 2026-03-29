@@ -16,11 +16,11 @@ p6df::modules::awscdk::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::external::brew()
+# Function: p6df::modules::awscdk::external::brews()
 #
 #>
 ######################################################################
-p6df::modules::awscdk::external::brew() {
+p6df::modules::awscdk::external::brews() {
 
   p6df::core::homebrew::cmd::brew tap isen-ng/dotnet-sdk-versions
   p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
