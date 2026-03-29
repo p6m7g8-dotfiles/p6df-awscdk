@@ -1,1 +1,3 @@
 share/.dotnet/
+share/.nuget/
+share/.templateengine/
