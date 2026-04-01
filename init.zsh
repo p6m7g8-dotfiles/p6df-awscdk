@@ -34,7 +34,7 @@ p6df::modules::awscdk::external::brews() {
 #
 # Function: p6df::modules::awscdk::home::symlinks()
 #
-#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::awscdk::home::symlinks() {
@@ -49,21 +49,15 @@ p6df::modules::awscdk::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::init(_module, dir)
-#
-#  Args:
-#	_module -
-#	dir -
+# Function: p6df::modules::awscdk::env::init()
 #
 #  Environment:	 DOTNET_ROOT
 #>
 ######################################################################
-p6df::modules::awscdk::init() {
+p6df::modules::awscdk::env::init() {
+
   local _module="$1"
-  local dir="$2"
-
-  p6_bootstrap "$dir"
-
+  local _dir="$2"
   p6_env_export "DOTNET_ROOT" "/opt/homebrew/opt/dotnet/libexec"
 
   p6_return_void
@@ -117,11 +111,15 @@ p6df::modules::awscdk::clones() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::prompt::mod()
+# Function: words awscdk = p6df::modules::awscdk::prompt::system()
 #
+#  Returns:
+#	words - awscdk
+#
+#  Environment:	 CDK_DEFAULT_ACCOUNT CDK_DEFAULT_REGION CDK_DEPLOY_ACCOUNT CDK_DEPLOY_REGION
 #>
 ######################################################################
-p6df::modules::awscdk::prompt::mod() {
+p6df::modules::awscdk::prompt::system() {
 
-  p6_awscdk_prompt_info
+  p6_return_words 'awscdk' '$CDK_DEPLOY_ACCOUNT' '$CDK_DEPLOY_REGION' '$CDK_DEFAULT_ACCOUNT' '$CDK_DEFAULT_REGION'
 }
