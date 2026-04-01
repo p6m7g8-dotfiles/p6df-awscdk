@@ -121,5 +121,5 @@ p6df::modules::awscdk::clones() {
 ######################################################################
 p6df::modules::awscdk::prompt::system() {
 
-  p6_return_words 'awscdk' '$CDK_DEPLOY_ACCOUNT' '$CDK_DEPLOY_REGION' '$CDK_DEFAULT_ACCOUNT' '$CDK_DEFAULT_REGION'
+  p6_return_words 'awscdk' "$" "$" "$" "$"
 }
