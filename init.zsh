@@ -16,7 +16,11 @@ p6df::modules::awscdk::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::env::init()
+# Function: p6df::modules::awscdk::env::init(_module, _dir)
+#
+#  Args:
+#	_module -
+#	_dir -
 #
 #  Environment:	 DOTNET_ROOT
 #>
