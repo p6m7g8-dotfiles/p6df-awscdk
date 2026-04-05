@@ -1,11 +1,5 @@
 # shellcheck shell=bash
 ######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::deps()
-#
-#>
-######################################################################
 p6df::modules::awscdk::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6awscdk
@@ -13,46 +7,6 @@ p6df::modules::awscdk::deps() {
   )
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::external::brews()
-#
-#>
-######################################################################
-p6df::modules::awscdk::external::brews() {
-
-  p6df::core::homebrew::cmd::brew tap isen-ng/dotnet-sdk-versions
-  p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
-  p6df::core::homebrew::cli::brew::install dotnet
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
-######################################################################
-p6df::modules::awscdk::home::symlinks() {
-
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.nuget" "$HOME/.nuget"
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.dotnet" "$HOME/.dotnet"
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.templateengine" "$HOME/.templateengine"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::env::init()
-#
-#  Environment:	 DOTNET_ROOT
-#>
 ######################################################################
 p6df::modules::awscdk::env::init() {
 
@@ -64,11 +18,25 @@ p6df::modules::awscdk::env::init() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::langs()
-#
-#>
+p6df::modules::awscdk::home::symlinks() {
+
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.nuget" "$HOME/.nuget"
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.dotnet" "$HOME/.dotnet"
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.templateengine" "$HOME/.templateengine"
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::awscdk::external::brews() {
+
+  p6df::core::homebrew::cmd::brew tap isen-ng/dotnet-sdk-versions
+  p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
+  p6df::core::homebrew::cli::brew::install dotnet
+
+  p6_return_void
+}
+
 ######################################################################
 p6df::modules::awscdk::langs() {
 
@@ -78,6 +46,38 @@ p6df::modules::awscdk::langs() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::deps()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::external::brews()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::env::init()
+#
+#  Environment:	 DOTNET_ROOT
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::langs()
+#
+#>
 ######################################################################
 #<
 #
