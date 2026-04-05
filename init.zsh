@@ -16,15 +16,16 @@ p6df::modules::awscdk::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::external::brews()
+# Function: p6df::modules::awscdk::env::init()
 #
+#  Environment:	 DOTNET_ROOT
 #>
 ######################################################################
-p6df::modules::awscdk::external::brews() {
+p6df::modules::awscdk::env::init() {
 
-  p6df::core::homebrew::cmd::brew tap isen-ng/dotnet-sdk-versions
-  p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
-  p6df::core::homebrew::cli::brew::install dotnet
+  local _module="$1"
+  local _dir="$2"
+  p6_env_export "DOTNET_ROOT" "/opt/homebrew/opt/dotnet/libexec"
 
   p6_return_void
 }
@@ -49,16 +50,15 @@ p6df::modules::awscdk::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::awscdk::env::init()
+# Function: p6df::modules::awscdk::external::brews()
 #
-#  Environment:	 DOTNET_ROOT
 #>
 ######################################################################
-p6df::modules::awscdk::env::init() {
+p6df::modules::awscdk::external::brews() {
 
-  local _module="$1"
-  local _dir="$2"
-  p6_env_export "DOTNET_ROOT" "/opt/homebrew/opt/dotnet/libexec"
+  p6df::core::homebrew::cmd::brew tap isen-ng/dotnet-sdk-versions
+  p6df::core::homebrew::cli::brew::install --cask dotnet-sdk3-1-400
+  p6df::core::homebrew::cli::brew::install dotnet
 
   p6_return_void
 }
