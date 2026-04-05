@@ -1,5 +1,11 @@
 # shellcheck shell=bash
 ######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::deps()
+#
+#>
+######################################################################
 p6df::modules::awscdk::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6awscdk
@@ -7,6 +13,13 @@ p6df::modules::awscdk::deps() {
   )
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::env::init()
+#
+#  Environment:	 DOTNET_ROOT
+#>
 ######################################################################
 p6df::modules::awscdk::env::init() {
 
@@ -18,6 +31,13 @@ p6df::modules::awscdk::env::init() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
+######################################################################
 p6df::modules::awscdk::home::symlinks() {
 
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-awscdk/share/.nuget" "$HOME/.nuget"
@@ -27,6 +47,12 @@ p6df::modules::awscdk::home::symlinks() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::external::brews()
+#
+#>
 ######################################################################
 p6df::modules::awscdk::external::brews() {
 
@@ -38,6 +64,12 @@ p6df::modules::awscdk::external::brews() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::awscdk::langs()
+#
+#>
+######################################################################
 p6df::modules::awscdk::langs() {
 
   p6_js_npm_global_install "aws-cdk"
@@ -46,38 +78,6 @@ p6df::modules::awscdk::langs() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::deps()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::external::brews()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::env::init()
-#
-#  Environment:	 DOTNET_ROOT
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::awscdk::langs()
-#
-#>
 ######################################################################
 #<
 #
