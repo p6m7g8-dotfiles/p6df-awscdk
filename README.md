@@ -37,15 +37,15 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules::awscdk::clones()`
 - `p6df::modules::awscdk::deps()`
-- `p6df::modules::awscdk::external::brew()`
-- `p6df::modules::awscdk::home::symlink()`
-- `p6df::modules::awscdk::init(_module, dir)`
+- `p6df::modules::awscdk::env::init(_module, _dir)`
   - Args:
-    - _module -
-    - dir -
+    - _module
+    - _dir
+- `p6df::modules::awscdk::external::brews()`
+- `p6df::modules::awscdk::home::symlinks()`
 - `p6df::modules::awscdk::langs()`
 - `p6df::modules::awscdk::langs::awscdk()`
-- `p6df::modules::awscdk::prompt::mod()`
+- `words awscdk = p6df::modules::awscdk::prompt::system()`
 
 #### p6df-awscdk/lib
 
@@ -54,7 +54,7 @@ TODO: Add a short summary of this module.
 - `p6df::modules::awscdk::docker::build()`
 - `p6df::modules::awscdk::docker::run(...)`
   - Args:
-    - ... -
+    - ...
 
 ## Hierarchy
 
